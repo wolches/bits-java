@@ -11,7 +11,7 @@
   <url>https://wolches.github.io</url>
 
   <properties>
-    <java.version>1.8</java.version>
+    <java.version>8</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
@@ -19,7 +19,7 @@
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter</artifactId>
-      <version>LATEST</version>
+      <version>5.11.0-M2</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
