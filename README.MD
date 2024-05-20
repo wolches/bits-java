@@ -17,8 +17,8 @@ To get a project into your build:
 
 ```
 	<dependency>
-	    <groupId>com.github.User</groupId>
-	    <artifactId>Repo</artifactId>
-	    <version>Tag</version>
+	    <groupId>com.github.wolches</groupId>
+	    <artifactId>bits-java</artifactId>
+	    <version>0.1.5</version>
 	</dependency>
 ```
