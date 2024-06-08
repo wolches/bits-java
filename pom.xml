@@ -4,7 +4,7 @@
 
   <groupId>io.github.wolches</groupId>
   <artifactId>bits-java</artifactId>
-  <version>0.1.6</version>
+  <version>0.1.7</version>
   <packaging>jar</packaging>
 
   <name>bits-java</name>

@@ -15,9 +15,9 @@ public class EmployeeId {
     }
 
     public EmployeeId(long composedId) {
-        this.organisationId = (short) (composedId >> 48);
-        this.departmentId = (short) ((composedId >> 32) & 0x0000ffff);
-        this.employeeSelfId = (int) composedId;
+        this.organisationId = (short) ((composedId & 0xFFFF_0000_0000_0000L) >>> 48);
+        this.departmentId = (short) ((composedId & 0x0000_FFFF_0000_0000L) >>> 32);
+        this.employeeSelfId = (int) (composedId & 0x0000_0000_FFFF_FFFFL);
     }
 
     public EmployeeId(Employee employee) {
@@ -37,8 +37,8 @@ public class EmployeeId {
     }
 
     public long toLong() {
-        return (((long) organisationId) << 48)
-                + (((long) departmentId) << 32)
-                + ((long) employeeSelfId);
+        return ((((long) organisationId) << 48) & 0xFFFF_0000_0000_0000L)
+                | ((((long) departmentId) << 32) & 0x0000_FFFF_0000_0000L)
+                | (((long) employeeSelfId) & 0x0000_0000_FFFF_FFFFL);
     }
 }
