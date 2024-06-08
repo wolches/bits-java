@@ -15,12 +15,20 @@ class EmployeeIdTest {
         long actual = new EmployeeId(expected).toLong();
 
         assertEquals(expected, actual, errorMessage(expected, actual));
+        System.out.println(successMessage(expected, actual));
     }
 
     private String errorMessage(long expected, long actual) {
         return String.format(
                 "Failed conversion test: \r\n0x%s expected, \r\n0x%s actual value",
                 Long.toHexString(expected).toUpperCase(), Long.toHexString(actual).toUpperCase()
+        );
+    }
+
+    private String successMessage(long expected, long actual) {
+        return String.format(
+                "Successful conversion test: \r\n0x%s expected, \r\n0x%s actual value \r\n%d\r\n%d",
+                Long.toHexString(expected).toUpperCase(), Long.toHexString(actual).toUpperCase(), expected, actual
         );
     }
 }
